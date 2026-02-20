@@ -15,7 +15,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://sadikcserymec077.github.io'],
+    origin: true,
     credentials: true,
 }));
 

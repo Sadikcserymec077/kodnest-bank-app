@@ -40,7 +40,8 @@ const Dashboard = () => {
         }
 
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/balance', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const response = await axios.get(`${apiUrl}/api/auth/balance`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },
