@@ -24,6 +24,11 @@ app.use(cookieParser());
 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkodbankkey';
 
+// Root Route
+app.get('/', (req, res) => {
+    res.send('Kodbank API is running perfectly!');
+});
+
 // Registration Route
 app.post('/api/auth/register', async (req, res) => {
     try {
